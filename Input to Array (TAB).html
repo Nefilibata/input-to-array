@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input to Array (TAB)</title>
+</head>
+<main>
+    <h1>Paste your text below, hit submit, and copy your Array data</h1>
+    <li>Note: The below converts on "	" (tab) ONLY. </li>
+    
+    <textarea type="textarea" id="input" rows="10" cols="50"></textarea>
+    
+    <p id="output">This will be replaced with your output</p>     
+    </main>
+<body>
+    <script>
+    input = document.getElementById("input");
+    output = document.getElementById("output");
+
+    input.addEventListener("keyup", function (event) {
+	var inputText = event.target.value;
+	console.log = inputText;
+	inputArray = inputText.split("	")
+
+	outputArray = inputArray.join('", "')
+	output.innerText = `"${outputArray} "`;
+});
+
+    </script>
+</body>
+</html>DOCTYPE
